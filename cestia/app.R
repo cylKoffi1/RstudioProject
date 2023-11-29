@@ -3,7 +3,7 @@ library(shinydashboard)
 library(shinydashboardPlus)
 
 # Chemin vers le dossier d'images
-chemin_images <- file.path("C://Users/CYL KOFFI/Documents/images/")
+chemin_images <- file.path(".", "images/")
 
 # Define UI for application that draws a histogram
 ui <- dashboardPage(
@@ -39,9 +39,9 @@ ui <- dashboardPage(
                 ),
                 tags$div(
                   class = "carousel-inner",
-                  tags$div(class = "item active", tags$img(src = file.path(chemin_images, "image1.jpg"), width = "100%")),
+                  tags$div(class = "item active", tags$img(src="images/image1.jpg", width = '100%')),
                   tags$div(class = "item", tags$img(src = file.path(chemin_images, "image2.jpg"), width = "100%")),
-                  tags$div(class = "item", tags$img(src = file.path(chemin_images, "image3.jpg"), width = "100%"))
+                  tags$div(class = "item", tags$img(src = file.path(chemin_images, "image1.jpg"), width = "100%"))
                 ),
                 tags$a(class = "left carousel-control", href = "#myCarousel", role = "button", data_slide = "prev",
                        tags$span(class = "glyphicon glyphicon-chevron-left", "aria-hidden" = "true"),
